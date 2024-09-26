@@ -1,0 +1,15 @@
+<li class="d-flex justify-content-between">
+        <div class="form-check">
+          <label class="form-check-lable">
+            <input
+            class="checkbox"
+            type="checkbox"
+            [checked]="team.matchResult"
+            (click)="tooglewonOrLost()"
+             >{{ team.name }}  {{team.id}} {{team.matchResult}}
+          </label>
+        </div>
+        <div>
+          <button type ="button" class="btn-close" (click)="removeTeam()"></button>
+        </div>
+</li>

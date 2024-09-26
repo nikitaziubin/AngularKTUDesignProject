@@ -1,0 +1,15 @@
+<add-team-form (addTeam)="items.push($event)">
+
+</add-team-form>
+
+<app-team-filter (filter)="filter = $event">
+
+</app-team-filter>
+
+<div class="container">
+  <team-list [teamsFromArray]="visibleTeams" > </team-list>
+</div>
+
+<a href="#" (click)="$event.preventDefault(); goToContact()"> Contacts</a>
+
+<!-- <router-outlet></router-outlet> -->

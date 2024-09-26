@@ -1,0 +1,15 @@
+<div *ngIf="teamsFromArray.length === 0; else showItems">
+    There are no teams to display
+</div>
+
+
+
+  <ng-template #showItems>
+    <ul class="team-least" *ngIf="teamsFromArray.length > 0">
+      <team-list-item
+        *ngFor="let team of teamsFromArray"
+        [team]="team"
+      ></team-list-item>
+    </ul>
+  </ng-template>
+
