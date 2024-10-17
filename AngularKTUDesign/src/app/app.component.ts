@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { team } from '../shared/models/teams';
@@ -9,9 +8,9 @@ import { TeamFilterComponent } from "./team-filter/team-filter.component";
 import { TeamService } from './team.service';
 import events from './../shared/services/EventService';
 import { ContactComponent } from "./contact/contact.component";
-import { Router } from '@angular/router';
+import { Router, RouterLink, RouterOutlet, RouterLinkActive } from '@angular/router';
 import { RouterModule } from '@angular/router';
-import { NavigationExtras } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -25,6 +24,8 @@ import { NavigationExtras } from '@angular/router';
     TeamFilterComponent,
     ContactComponent,
     RouterModule,
+    RouterLink,
+    RouterLinkActive,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -52,7 +53,7 @@ export class AppComponent implements OnInit {
   get visibleTeams(): team[] {
     return this.items.filter(this.filter);
   }
-  goToContact() {
-    this.router.navigate(['addTeam']); //to check code
+  goToClubList() {
+    this.router.navigate(['club-list']);
   }
 }

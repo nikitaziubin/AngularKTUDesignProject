@@ -8,7 +8,7 @@ export class team {
     public clubNavigation: clubs = new clubs(
       1,
       'Club',
-      '2021-12-17T04:28:00',
+      "",
       'ClubAdres'
     )
   ) {}
